@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fa{
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+        }
+        .fa .son{
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- //捕获阶段是从小到大  冒泡事件是从大到小 -->
+    <!-- 捕获：从父到子  冒泡：从子到父 -->
+    <!-- 实际工作以冒泡为主 -->
+    <div class="fa">
+        <div class="son"></div>
+    </div>
+    <script>
+        const fa = document.querySelector('.fa')
+        const son = document.querySelector('.son')
+        document.addEventListener('click', function(){
+            alert('yeye')
+        },true)
+        //第三个值的位置  false 就是冒泡
+        //true就是捕获
+        // document.addEventListener('click', function(){
+        //     alert('yeye')
+        // },true（这里）)
+        fa.addEventListener('click', function(){
+            alert('bb')
+        },true)
+        son.addEventListener('click', function(e){
+            alert('erzi')
+        },true)
+    </script>
+</body>
+</html>

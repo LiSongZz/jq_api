@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1></h1>
+        <h2></h2>
+        <h5></h5>
+    </div>
+    <script>
+        const personArr = ['11', '22', '33', '44', '55']
+
+        function getRandom(setHtmlDom){
+            let random = Math.floor(Math.random() * personArr.length) 
+            setHtmlDom.innerHTML = personArr[random]
+            personArr.splice(random, 1)
+            console.log(personArr);
+        }
+
+        // let random = Math.floor(Math.random() * personArr.length) 
+        const doch1 = document.querySelector('h1')
+        // doch1.innerHTML = personArr[random]
+        // personArr.splice(random, 1)
+        // console.log(personArr);
+        getRandom(doch1)
+
+        // random = Math.floor(Math.random() * personArr.length) 
+        const doch2 = document.querySelector('h2')
+        // doch2.innerHTML = personArr[random]
+        // personArr.splice(random, 1)
+        // console.log(personArr);
+        getRandom(doch2)
+
+        // random = Math.floor(Math.random() * personArr.length) 
+        const doch3 = document.querySelector('h5')
+        // doch3.innerHTML = personArr[random]
+        // personArr.splice(random, 1)
+        // console.log(personArr);
+        getRandom(doch3)
+    </script>
+</body>
+</html>

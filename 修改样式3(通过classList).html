@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .setcss{
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            margin: 0 auto;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">lalalala</div>
+    <script>
+        const box = document.querySelector('.box')
+        //追加一个类
+        box.classList.add('setcss')
+        //删除一个类
+        box.classList.remove('setcss')
+        //切换一个类   没有就加  有就去掉
+        box.classList.toggle('setcss')
+    </script>
+</body>
+</html>

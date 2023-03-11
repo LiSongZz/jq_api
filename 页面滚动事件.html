@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 200px;
+            height: 2000px;
+        }
+        div{
+            display: none;
+            overflow: scroll;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaaaaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+        aaaaa
+    </div>
+    <script>
+        
+        //页面滚动事件  也可以给元素添加
+        //scrollTop 这个值是可读写的
+        window.addEventListener('scroll', function(){
+            const a = document.querySelector('div')
+            // console.log('我滚了');
+            //获取html元素的写法   document.documentElement
+            // console.log(document.documentElement.scrollTop);
+            const n = document.documentElement.scrollTop
+            if(n >= 100){
+                a.style.display = 'block'
+            }else{
+                a.style.display = 'none'
+            }
+        })
+
+
+
+        //显示div滚动了多少  可以理解为  有多少像素看不见了
+        // const a = document.querySelector('div')
+        // a.addEventListener('scroll', function(e){
+        //     console.log(a.scrollTop);
+        // })
+    </script>
+</body>
+</html>

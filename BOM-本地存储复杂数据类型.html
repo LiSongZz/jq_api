@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const a = {
+            name: 'aa',
+            age: '18'
+        }
+        //不能这样直接存储
+        // localStorage.setItem('a',a)
+        // console.log(localStorage.getItem('a'));
+        // localStorage.removeItem('a')
+
+
+        //需要把复杂数据类型转换成字符串
+        localStorage.setItem('a',JSON.stringify(a))
+        console.log(localStorage.getItem('a'));
+
+
+        //把json换成对象
+        console.log(JSON.parse(localStorage.getItem('a')));
+
+
+
+
+
+
+        localStorage.removeItem('a')
+    </script>
+</body>
+</html>

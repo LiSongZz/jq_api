@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button></button>
+    <input type="text">
+    <script>
+        const bu = document.querySelector('button')
+        bu.addEventListener('click', function(e){
+            //这个e就叫事件对象
+            console.log(e);
+            console.log(e.type);
+        })
+
+        const inp = document.querySelector('input')
+        inp.addEventListener('keyup', function(e){
+            //以前用的是keycood  现在已经废弃
+            // console.log(e.key);
+            if(e.key === 'Enter'){
+                console.log(`你按了回车并且写了:${inp.value}`);
+            }
+        })
+    </script>
+</body>
+</html>

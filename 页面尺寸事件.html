@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            /* width: 200px; */
+            height: 200px;
+            background-color: lawngreen;
+            padding: 10px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div>11111111111</div>
+    <script>
+        //与滚动有关系
+        //clientWidth clientHHeight获取当前元素的可见部分的宽高  不包含边框.margin.滚动条
+        
+        
+        //与位置有关系
+        //offsetWidth offsetHeight获取元素自身的宽高  包含宽高.padding.border  如果盒子隐藏 那就是0
+        //
+        const aaa = document.querySelector('div')
+        console.log(aaa.clientWidth);
+        console.log(aaa.offsetWidth);
+
+        //浏览器发生大小改变事件
+        window.addEventListener('resize',function(){
+            console.log(1);
+        })
+    </script>
+</body>
+</html>

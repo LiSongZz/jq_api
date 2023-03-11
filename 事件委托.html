@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1个孩子</li>
+        <li>2个孩子</li>
+        <li>3个孩子</li>
+        <li>4个孩子</li>
+        <li>5个孩子</li>
+        <p>11</p>
+    </ul>
+    <script>
+        //事件委托是利用事件流的特征解决一些开发中的技巧
+        //原理:利用时间冒泡的特点
+        //给父元素注册事件，当我们出发子元素的时候  会冒泡到父元素身上  从而处罚父元素事件
+        const f = document.querySelector('ul')
+        f.addEventListener('click', function(e){
+            // console.log(e.target)  //就是我们点击的那个对象
+            console.dir(e.target)
+            if (e.target.tagName === 'LI') {
+                e.target.style.color = 'red'
+            }
+        })
+    </script>
+</body>
+</html>

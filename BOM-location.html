@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="">
+        <input type="text" name="pass" id="">
+        <input type="submit" name="" id="">
+    </form>
+    <a href="#/my">1111</a>
+    <a href="#/you">222</a>
+
+    <button class="shuax">刷新</button>
+   <script>
+    //跳转
+    // location.href = 'http://www.baidu.com'
+    
+    //浏览器里输入这个  可以拿到点击登陆后  浏览器地址栏问号后面部分  location.search
+    //浏览器里输入这个  可以拿到哈希  浏览器地址栏点击a之后  location.hash
+   
+    const a = document.querySelector('.shuax')
+    a.addEventListener('click', function(){
+        location.reload()
+        //加了true就是强制刷新 类似于ctrl+f5  应该可以理解为从本地去数据  location.reload(true)
+    })
+   </script> 
+</body>
+</html>

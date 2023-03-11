@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //这样是会报错的  以为也页面没有加载出来
+        // const a = document.querySelector('button')
+        // a.addEventListener('click', function(e){
+        //     alert('111')
+        // })
+
+        //等到页面全部加载完毕后  在执行回调函数
+        window.addEventListener('load', function(){
+            const a = document.querySelector('button')
+            a.addEventListener('click', function(e){
+            alert('111')
+        })
+        })
+
+        //不光可以监听整个页面资源  也可以针对某个资源绑定
+        // img.addEventListener('load', function(){})
+
+        //等待节点加载完就能执行回调函数  而上面的方法只能在整个加载完后执行
+        document.addEventListener('DOMContentLoaded', function(){})
+
+        //load  监听整个页面资源给window添加
+        //domcontentloaded  给document添加   无需等待央视表·图像等完全加载完
+    </script>
+</head>
+<body>
+    <button>111</button>
+</body>
+</html>

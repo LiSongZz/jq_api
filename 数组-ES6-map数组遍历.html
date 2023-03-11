@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map最大的好处是可以 处理数据  也可以遍历  可以返回一个数组
+        const a = ['a', 'b', 'c']
+        const arr = a.map(function(item, i){
+            console.log(item);//这里是遍历
+            return item + '老师'//这里是处理数据
+        })
+        console.log(arr);
+    </script>
+</body>
+</html>

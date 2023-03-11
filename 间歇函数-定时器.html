@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button disabled>稍等5秒</button>
+    <script>
+        //定时器有返回值 是一个数字 可以被接收  每一个定时器的id都是独一无二的
+
+
+        // setInterval(函数，间隔时间)
+        // 1
+        // setInterval(function() {
+        //     console.log('1');
+        // }, 1000)
+
+        // setInterval(函数名，间隔时间)
+        //2
+        // function fn() {
+        //     console.log('2');
+        // }
+        // let reId = setInterval(fn, 1000)
+        // clearInterval(reId)
+
+        //5秒后允许点击
+        const bu = document.querySelector('button')
+        let i = 5
+        let fn = setInterval(function(){
+            bu.innerHTML = `稍等${i--}秒`
+            console.log(i);
+            if (i === 0) {
+                bu.disabled = false
+                bu.innerHTML = `可以点击`
+                //关闭定时器
+                clearInterval(fn)
+            }
+        }, 1000)
+
+
+        
+    </script>
+</body>
+</html>

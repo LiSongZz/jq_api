@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .s{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="f">
+        <div class="s"></div>
+    </div>
+    <script>
+        // mouseover 和 mouseout 会有冒泡效果
+        // mouseenter 和 mouseleave 没有冒泡效果（推荐）
+        const f = document.querySelector('.f')
+        const s = document.querySelector('.s')
+        //鼠标从f放回到s上是 会触发离开 经过
+        // f.addEventListener('mouseover', function(){
+        //     console.log('jguo');
+        // })
+        // f.addEventListener('mouseout', function(){
+        //     console.log('likai');
+        // })
+
+        f.addEventListener('mouseenter', function(){
+            console.log('jguo');
+        })
+        f.addEventListener('mouseleave', function(){
+            console.log('likai');
+        })
+
+
+    </script>
+</body>
+</html>

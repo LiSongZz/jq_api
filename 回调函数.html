@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>111</button>
+    <script>
+        //把函数当作另一个函数的参数传递 这个函数就叫回调参数
+        //回调函数本质还是函数 只是当作参数使用
+        //使用匿名函数作为回调函数比较常见
+        const aa = document.querySelector('button')
+        function a() {
+            console.log('我是回调i函数');
+        }
+        setInterval(a,1000)
+        // setInterval(function(){
+        //     console.log('111');
+        // },1000)
+        aa.addEventListener('click', function(e){
+            console.log('w 也是回调函数');
+        })
+    </script>
+</body>
+</html>

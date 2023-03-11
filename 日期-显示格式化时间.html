@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const a = document.querySelector('div')
+        
+        function getTime(){
+            const t = new Date()
+            let h = t.getHours()
+            let m = t.getMinutes()
+            let s = t.getSeconds()
+            h=h<10?'0'+h:h
+            m=m<10?'0'+m:m
+            s=s<10?'0'+s:s
+            //!!!
+            console.log(t.toLocaleDateString());//2023/3/3
+            console.log(t.toLocaleString());//2023/3/3 09:50:23
+            console.log(t.toLocaleTimeString());//09:50:23
+
+            return `今天是${t.getFullYear()}年${t.getMonth()}月${t.getDate()}日 ${h} ：${m}：${s}`
+        }
+        
+
+        setInterval(function(){
+            a.innerHTML = getTime()
+        },1000)
+    </script>
+</body>
+</html>
